@@ -87,5 +87,10 @@ function startCalculator() {
   });
 }
 
-// Start the calculator
-startCalculator();
+// Export calculate function for testing
+module.exports = { calculate };
+
+// Start the calculator only if this file is run directly
+if (require.main === module) {
+  startCalculator();
+}
